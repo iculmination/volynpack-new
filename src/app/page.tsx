@@ -1,3 +1,9 @@
+import WelcomeBlock from "@/components/blocks/welcome-block";
+
 export default function Home() {
-  return <main></main>;
+  return (
+    <main>
+      <WelcomeBlock />
+    </main>
+  );
 }

@@ -1,5 +1,7 @@
-import "./App.css";
+import Header from "@/components/blocks/header-block";
+import "./globals.css";
 import { Comfortaa } from "next/font/google";
+import Footer from "@/components/blocks/footer-block";
 
 const comfortaa = Comfortaa({
   subsets: ["latin"],
@@ -12,14 +14,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={comfortaa.className}>
-      <body>{children}</body>
+    <html lang="uk" className={comfortaa.className}>
+      <body>
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
 
 export const metadata = {
-  title: "Магазин паперових пакетів 24/7",
+  title: "Volynpack",
   description:
     "Volynpack - Тут можна купити велику партію паперових пакетів оптом",
   openGraph: {
