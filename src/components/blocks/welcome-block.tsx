@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "../ui/button";
 import SwiperMain from "../ui/swiper";
 
@@ -14,6 +15,13 @@ const WelcomeBlock = () => {
         <Button className="mx-auto text-md">Про нас</Button>
       </div>
       <SwiperMain />
+      <Image
+        src="/Path 2.png"
+        width={1440}
+        height={35}
+        alt="path"
+        className="absolute bottom-0 w-full z-10 -mb-1"
+      />
     </section>
   );
 };

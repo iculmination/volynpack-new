@@ -23,7 +23,7 @@ const SwiperMain = () => {
       pagination={{ clickable: true }}
       autoplay
       navigation
-      className="bg-black/50 custom-swiper"
+      className="bg-white custom-swiper"
     >
       {images.map((image) => (
         <SwiperSlide key={image}>
