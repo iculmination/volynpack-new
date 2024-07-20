@@ -1,11 +1,16 @@
-import Image from "next/image";
+import { Button } from "../ui/button";
 
 const AdBlock = () => {
   return (
-    <section className="flex justify-evenly">
-      <Image src="/paper-bags.webp" width={500} height={500} alt="paper-bags" />
-      <div className="w-1/2 flex flex-col items-center justify-center text-left">
-        
+    <section className="bg-[url('/bags-wide.png')] h-[800px] bg-fixed bg-cover w-full">
+      <div className="bg-black/30 w-full h-full text-center text-white font-bold flex flex-col items-center justify-center space-y-6 drop-shadow">
+        <h2 className="text-6xl">Lorem ipsum dolor sit.</h2>
+        <p className="text-xl w-[800px]">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolore
+          sapiente rem qui, voluptate perferendis expedita molestias aspernatur
+          eius neque!
+        </p>
+        <Button>Lorem, ipsum.</Button>
       </div>
     </section>
   );
