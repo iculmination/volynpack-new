@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 const DescriptionBlock = () => {
   return (
     <section className="flex justify-evenly py-32 w-full">
-      <div className="bg-pink-600 rounded-full ">
+      <div className="bg-gradient-to-b from-pink-500 to-pink-700 rounded-full ">
         <Image
           src="/paper-bags.webp"
           width={500}

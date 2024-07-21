@@ -24,7 +24,7 @@ const DescriptionSecondBlock = () => {
             Lorem.
           </Button>
         </div>
-        <div className="bg-pink-600 rounded-full ">
+        <div className="bg-gradient-to-b from-pink-500 to-pink-700 rounded-full ">
           <Image
             src="/paper-bags.webp"
             width={500}
