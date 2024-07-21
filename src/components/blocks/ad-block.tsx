@@ -1,16 +1,31 @@
+import Image from "next/image";
 import { Button } from "../ui/button";
 
 const AdBlock = () => {
   return (
     <section className="bg-[url('/bags-wide.png')] h-[800px] bg-fixed bg-cover w-full">
-      <div className="bg-black/30 w-full h-full text-center text-white font-bold flex flex-col items-center justify-center space-y-6 drop-shadow">
-        <h2 className="text-6xl">Lorem ipsum dolor sit.</h2>
-        <p className="text-xl w-[800px]">
+      <div className="relative bg-black/30 w-full h-full text-center text-white font-bold flex flex-col items-center justify-center space-y-6">
+        <h2 className="text-6xl drop-shadow">Lorem ipsum dolor sit.</h2>
+        <p className="text-xl w-[800px] drop-shadow">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolore
           sapiente rem qui, voluptate perferendis expedita molestias aspernatur
           eius neque!
         </p>
-        <Button>Lorem, ipsum.</Button>
+        <Button className="drop-shadow">Lorem, ipsum.</Button>
+        <Image
+          src="/Path 2.png"
+          width={1440}
+          height={35}
+          alt="path"
+          className="absolute -bottom-1 w-full z-10"
+        />
+        <Image
+          src="/Path 2 reversed.png"
+          width={1440}
+          height={35}
+          alt="path"
+          className="absolute -top-7 w-full z-10"
+        />
       </div>
     </section>
   );
