@@ -27,7 +27,7 @@ const DescriptionBlock = () => {
           tenetur voluptate officiis reiciendis. Dolorem architecto voluptatum
           quibusdam, laborum odio unde.
         </p>
-        <Button className="w-40 bg-white border border-pink-600 text-pink-600 hover:text-white">
+        <Button className="w-40 bg-white border border-pink-600 text-pink-600 hover:text-white hover:bg-pink-600">
           Lorem.
         </Button>
       </div>
