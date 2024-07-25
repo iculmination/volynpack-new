@@ -3,10 +3,17 @@ import { Button } from "../ui/button";
 
 const AdBlock = () => {
   return (
-    <section className="bg-[url('/bags-wide.png')] h-[800px] bg-fixed bg-cover w-full">
-      <div className="relative bg-black/30 w-full h-full text-center text-white font-bold flex flex-col items-center justify-center space-y-6">
-        <h2 className="text-6xl drop-shadow">Lorem ipsum dolor sit.</h2>
-        <p className="text-xl w-[800px] drop-shadow">
+    <section className="bg-[url('/bags-wide.png')] h-[600px] lg:h-[800px] bg-fixed bg-cover w-full">
+      <div className="relative bg-black/30 w-full h-full px-6 lg:px-0 text-center text-white font-bold flex flex-col items-center justify-center space-y-6">
+        <h2 className="text-4xl lg:text-6xl drop-shadow">
+          Lorem ipsum dolor sit.
+        </h2>
+        <p className="lg:text-xl lg:w-[800px] drop-shadow">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolore
+          sapiente rem qui, voluptate perferendis expedita molestias aspernatur
+          eius neque!
+        </p>
+        <p className="lg:text-xl lg:w-[800px] drop-shadow">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est dolore
           sapiente rem qui, voluptate perferendis expedita molestias aspernatur
           eius neque!

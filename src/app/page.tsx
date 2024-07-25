@@ -9,7 +9,7 @@ import WelcomeBlock from "@/components/blocks/welcome-block";
 
 export default function Home() {
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <WelcomeBlock />
       <DescriptionBlock />
       <AdBlock />
