@@ -12,7 +12,10 @@ useEmblaCarousel.globalOptions = { loop: true };
 
 const MobileSheetBlock = () => {
   return (
-    <section className="lg:hidden w-full py-20 text-white text-xl">
+    <section
+      id="mobile-sheet"
+      className="lg:hidden w-full py-20 text-white text-xl"
+    >
       <Carousel
         plugins={[
           Autoplay({

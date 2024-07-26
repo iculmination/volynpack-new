@@ -63,18 +63,19 @@
 .custom-swiper .swiper-button-prev {
   color: #fff;
   transition-duration: 300ms;
+  display: none;
 }
 
-.custom-swiper .swiper-button-next:hover,
-.custom-swiper .swiper-button-prev:hover {
-  transform: scale(130%);
-  transition: all;
-  transition-duration: 300ms;
+@media (min-width: 768px) {
+  .custom-swiper .swiper-button-next,
+  .custom-swiper .swiper-button-prev {
+    display: block;
+  }
 }
 
 .custom-swiper .swiper-pagination-bullet-active {
   background-color: #db2777;
-  transform: scale(130%);
+  transform: scale(150%);
   transition: all;
   transition-duration: 300ms;
 }

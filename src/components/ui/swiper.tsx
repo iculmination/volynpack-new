@@ -33,7 +33,7 @@ const SwiperMain = () => {
             key={image}
             height={1000}
             width={1000}
-            className="mx-auto w-full bg-contain"
+            className="mx-auto w-full object-cover h-96 lg:h-auto"
           />
         </SwiperSlide>
       ))}

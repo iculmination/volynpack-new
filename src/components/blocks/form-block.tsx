@@ -68,13 +68,13 @@ const FormBlock = () => {
     },
   });
   return (
-    <section className="container py-28">
-      <h2 className="mx-auto text-center text-6xl font-bold text-pink-600 mb-10">
+    <section id="form" className="container py-16 lg:py-28">
+      <h2 className="mx-auto text-center text-4xl lg:text-6xl font-bold text-pink-600 mb-6 lg:mb-10">
         Lorem ipsum dolor sit amet.
       </h2>
-      <div className="flex items-center justify-evenly">
-        <div className="w-1/2">
-          <div className="w-full bg-gradient-to-b from-pink-500 via-pink-600 to-pink-700 text-white py-6 px-8 rounded-t-lg">
+      <div className="flex flex-col lg:flex-row items-center justify-evenly">
+        <div className="lg:w-1/2">
+          <div className="w-full bg-gradient-to-b from-pink-500 via-pink-600 to-pink-700 text-white py-4 lg:py-6 px-4 lg:px-8 rounded-t-lg">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)}>
                 <FormField
@@ -82,7 +82,7 @@ const FormBlock = () => {
                   name="contacts"
                   render={({ field }) => (
                     <FormItem className="w-full mb-6">
-                      <FormLabel className="ml-2">{"Ім'я"}</FormLabel>
+                      <FormLabel className="sm:ml-2">{"Ім'я"}</FormLabel>
 
                       <FormControl>
                         <Input
@@ -102,7 +102,7 @@ const FormBlock = () => {
                   name="question"
                   render={({ field }) => (
                     <FormItem className="w-full mb-6">
-                      <FormLabel className="ml-2">Контакти</FormLabel>
+                      <FormLabel className="sm:ml-2">Контакти</FormLabel>
 
                       <FormControl>
                         <Input
@@ -122,8 +122,8 @@ const FormBlock = () => {
                   name="details"
                   render={({ field }) => (
                     <FormItem className="w-full mb-1">
-                      <FormLabel className="ml-2">
-                        Що бажаєте замовити/дізнатись?
+                      <FormLabel className="sm:ml-2">
+                        Що бажаєте замовити або дізнатись?
                       </FormLabel>
                       <FormControl>
                         <Textarea
@@ -147,7 +147,7 @@ const FormBlock = () => {
             Надіслати
           </Button>
         </div>
-        <div className="bg-gradient-to-b from-pink-500 via-pink-600 to-pink-700 rounded-full ">
+        <div className="bg-gradient-to-b from-pink-500 via-pink-600 to-pink-700 rounded-full w-fit h-fit mt-10 lg:mt-0">
           <Image
             width={450}
             height={450}

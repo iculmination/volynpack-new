@@ -11,7 +11,7 @@ import WelcomeBlock from "@/components/blocks/welcome-block";
 
 export default function Home() {
   return (
-    <main className="overflow-x-hidden">
+    <main className="overflow-x-hidden pt-20 lg:pt-0">
       <WelcomeBlock />
       <DescriptionBlock />
       <AdBlock />

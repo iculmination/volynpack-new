@@ -25,11 +25,14 @@ const data = [
 
 const MobileReviewsBlock = () => {
   return (
-    <section className="bg-gradient-to-b from-pink-600 from-50% via-pink-600 to-pink-800 text-white pt-10 pb-20 relative">
-      <h2 className="w-full text-4xl font-bold mb-4 drop-shadow-md px-4">
+    <section
+      id="mobile-reviews"
+      className="lg:hidden bg-gradient-to-b from-pink-600 from-50% via-pink-600 to-pink-800 text-white pt-10 pb-20 relative"
+    >
+      <h2 className="w-full text-4xl font-bold mb-4 drop-shadow-md container">
         Lorem ipsum dolor sit amet.
       </h2>
-      <p className="w-full mb-8 px-4">
+      <p className="w-full mb-8 container">
         Lorem ipsum dolor sit amet consectetur adipisicing.
       </p>
       <Carousel
@@ -39,12 +42,12 @@ const MobileReviewsBlock = () => {
           }),
         ]}
       >
-        <CarouselContent className="mx-12">
+        <CarouselContent className="mx-8">
           {data.map((el, i) => {
             return (
               <CarouselItem key={i}>
-                <div className="bg-white text-black rounded-lg p-8 drop-shadow-lg">
-                  <h3 className="text-pink-600 text-2xl font-bold mb-8">
+                <div className="bg-white text-black rounded-lg p-6 drop-shadow-lg">
+                  <h3 className="text-pink-600 text-2xl font-bold mb-4">
                     {el.h}
                   </h3>
                   <p>{el.p}</p>

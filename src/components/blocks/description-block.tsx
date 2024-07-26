@@ -3,7 +3,10 @@ import { Button } from "../ui/button";
 
 const DescriptionBlock = () => {
   return (
-    <section className="flex flex-col lg:flex-row justify-evenly px-10 lg:px-0 py-10 lg:py-32 w-full">
+    <section
+      id="description"
+      className="flex flex-col lg:flex-row justify-evenly px-10 lg:px-0 py-10 lg:py-32 w-full"
+    >
       <div className="bg-gradient-to-b from-pink-500 to-pink-700 rounded-full mx-auto lg:mx-0 w-fit">
         <Image
           src="/paper-bags.webp"
@@ -27,12 +30,14 @@ const DescriptionBlock = () => {
           tenetur voluptate officiis reiciendis. Dolorem architecto voluptatum
           quibusdam, laborum odio unde.
         </p>
-        <Button className="lg:w-40 bg-white border border-pink-600 text-pink-600 hover:text-white hover:bg-pink-600">
-          Lorem.
-        </Button>
+        <a href="#form" className="w-full">
+          <Button className="w-full lg:w-40 bg-white border border-pink-600 text-pink-600 hover:text-white hover:bg-pink-600">
+            Lorem.
+          </Button>
+        </a>
       </div>
     </section>
   );
 };
 
-export default DescriptionBlock;
+export default DescriptionBlock;  

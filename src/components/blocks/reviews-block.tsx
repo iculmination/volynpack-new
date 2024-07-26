@@ -2,7 +2,10 @@ import Image from "next/image";
 
 const ReviewsBlock = () => {
   return (
-    <section className="hidden lg:block bg-gradient-to-b from-pink-600 from-50% via-pink-600 to-pink-800 text-white pb-20 relative">
+    <section
+      id="reviews"
+      className="hidden lg:block bg-gradient-to-b from-pink-600 from-50% via-pink-600 to-pink-800 text-white pb-20 relative"
+    >
       <div className="container flex justify-center space-x-12">
         <div className="flex flex-col items-end w-1/2 mt-32">
           <h2 className="w-full text-6xl font-bold mb-4 drop-shadow-md">

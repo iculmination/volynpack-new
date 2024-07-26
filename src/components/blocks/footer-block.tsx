@@ -1,12 +1,15 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 
-const Header = () => {
+const Footer = () => {
   return (
-    <footer className="w-full py-10 lg:py-14 bg-black">
+    <footer id="footer" className="w-full py-10 lg:py-14 bg-black">
       <div className="container flex flex-col lg:flex-row justify-between text-gray-400">
         <h3 className="mb-4">
-          <a href="/" className="text-white font-bold text-4xl">
-            Volyn<span className="text-pink-600">pack</span>
+          <a href="#" className="text-white font-bold text-4xl group">
+            Volyn
+            <span className="text-pink-600 group-hover:text-white transitions duration-200">
+              pack
+            </span>
           </a>
         </h3>
         <nav className="flex flex-col lg:flex-row lg:space-x-10 space-y-2 lg:space-y-0">
@@ -36,4 +39,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Footer;

@@ -3,7 +3,10 @@ import { Button } from "../ui/button";
 
 const AdBlock = () => {
   return (
-    <section className="bg-[url('/bags-wide.png')] h-[600px] lg:h-[800px] bg-fixed bg-cover w-full">
+    <section
+      id="ad"
+      className="bg-[url('/bags-wide.png')] h-[600px] lg:h-[800px] bg-fixed bg-cover w-full"
+    >
       <div className="relative bg-black/30 w-full h-full px-6 lg:px-0 text-center text-white font-bold flex flex-col items-center justify-center space-y-6">
         <h2 className="text-4xl lg:text-6xl drop-shadow">
           Lorem ipsum dolor sit.
@@ -18,7 +21,9 @@ const AdBlock = () => {
           sapiente rem qui, voluptate perferendis expedita molestias aspernatur
           eius neque!
         </p>
-        <Button className="drop-shadow">Lorem, ipsum.</Button>
+        <a href="#form" className="">
+          <Button className="drop-shadow">Lorem, ipsum.</Button>
+        </a>
         <Image
           src="/Path 2.png"
           width={1440}
