@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { MotionDiv } from "../ui/motion-div";
 
 const ReviewsBlock = () => {
   return (
@@ -8,13 +9,34 @@ const ReviewsBlock = () => {
     >
       <div className="container flex justify-center space-x-12">
         <div className="flex flex-col items-end w-1/2 mt-32">
-          <h2 className="w-full text-6xl font-bold mb-4 drop-shadow-md">
-            Lorem ipsum dolor sit amet.
-          </h2>
-          <p className="w-full text-xl mb-12">
-            Lorem ipsum dolor sit amet consectetur adipisicing.
-          </p>
-          <div className="bg-white text-black w-4/5 rounded-lg p-10 drop-shadow-lg">
+          <MotionDiv
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.3 }}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 },
+            }}
+          >
+            <h2 className="w-full text-6xl font-bold mb-4 drop-shadow-md">
+              Lorem ipsum dolor sit amet.
+            </h2>
+            <p className="w-full text-xl mb-12">
+              Lorem ipsum dolor sit amet consectetur adipisicing.
+            </p>
+          </MotionDiv>
+          <MotionDiv
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, delay: 0.2 }}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 },
+            }}
+            className="bg-white text-black w-4/5 rounded-lg p-10 drop-shadow-lg"
+          >
             <h3 className="text-pink-600 text-4xl font-bold mb-8">
               Lorem, ipsum dolor.
             </h3>
@@ -25,11 +47,21 @@ const ReviewsBlock = () => {
               voluptatibus? Deserunt vero eos minima dicta accusantium ea,
               doloremque tenetur qui sapiente alias. Corporis.
             </p>
-          </div>
+          </MotionDiv>
         </div>
 
         <div className="flex flex-col items-start w-1/2 justify-center space-y-12 mt-48">
-          <div className="bg-white text-black w-full p-10 drop-shadow-lg rounded-lg">
+          <MotionDiv
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, delay: 0.4 }}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 },
+            }}
+            className="bg-white text-black w-full p-10 drop-shadow-lg rounded-lg"
+          >
             <h3 className="text-pink-600 text-4xl font-bold mb-8">
               Lorem ipsum dolor sit.
             </h3>
@@ -38,8 +70,18 @@ const ReviewsBlock = () => {
               aliquid dignissimos ducimus molestiae soluta quasi eligendi
               delectus. Tempora, qui accusantium!
             </p>
-          </div>
-          <div className="bg-white text-black w-3/5 rounded-lg p-10 drop-shadow-lg">
+          </MotionDiv>
+          <MotionDiv
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, delay: 0.6 }}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 },
+            }}
+            className="bg-white text-black w-3/5 rounded-lg p-10 drop-shadow-lg"
+          >
             <h3 className="text-pink-600 text-4xl font-bold mb-8">
               Lorem, ipsum.
             </h3>
@@ -48,7 +90,7 @@ const ReviewsBlock = () => {
               aliquid dignissimos ducimus molestiae soluta quasi eligendi
               delectus. Tempora, qui accusantium!
             </p>
-          </div>
+          </MotionDiv>
         </div>
       </div>
       <Image

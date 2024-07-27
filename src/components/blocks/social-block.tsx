@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 import { Facebook, Instagram, Youtube } from "lucide-react";
+import { MotionDiv } from "../ui/motion-div";
 
 const SocialBlock = () => {
   return (
@@ -15,24 +16,57 @@ const SocialBlock = () => {
         alt="path"
         className="absolute -top-1 w-full z-10"
       />
-      <Button
-        className="rounded-full size-20 sm:size-24 md:size-32"
-        variant="outline"
+      <MotionDiv
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.3 }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 },
+        }}
       >
-        <Instagram className="text-pink-600 size-12" />
-      </Button>
-      <Button
-        className="rounded-full size-20 sm:size-24 md:size-32"
-        variant="outline"
+        <Button
+          className="rounded-full size-20 sm:size-24 md:size-32"
+          variant="outline"
+        >
+          <Instagram className="text-pink-600 size-12" />
+        </Button>
+      </MotionDiv>
+      <MotionDiv
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.3, delay: 0.2 }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 },
+        }}
       >
-        <Facebook className="text-pink-600 size-12" />
-      </Button>
-      <Button
-        className="rounded-full size-20 sm:size-24 md:size-32"
-        variant="outline"
+        <Button
+          className="rounded-full size-20 sm:size-24 md:size-32"
+          variant="outline"
+        >
+          <Facebook className="text-pink-600 size-12" />
+        </Button>
+      </MotionDiv>
+      <MotionDiv
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.3, delay: 0.4 }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 },
+        }}
       >
-        <Youtube className="text-pink-600 size-12" />
-      </Button>
+        <Button
+          className="rounded-full size-20 sm:size-24 md:size-32"
+          variant="outline"
+        >
+          <Youtube className="text-pink-600 size-12" />
+        </Button>
+      </MotionDiv>
     </section>
   );
 };

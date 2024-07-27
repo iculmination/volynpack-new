@@ -19,6 +19,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
+import { MotionDiv } from "../ui/motion-div";
 
 const FormSchema = z.object({
   contacts: z.string().min(1, {
@@ -69,11 +70,32 @@ const FormBlock = () => {
   });
   return (
     <section id="form" className="container py-16 lg:py-28">
-      <h2 className="mx-auto text-center text-4xl lg:text-6xl font-bold text-pink-600 mb-6 lg:mb-10">
-        Lorem ipsum dolor sit amet.
-      </h2>
-      <div className="flex flex-col lg:flex-row items-center justify-evenly">
-        <div className="lg:w-1/2">
+      <MotionDiv
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 0.3 }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 },
+        }}
+      >
+        <h2 className="mx-auto text-center text-4xl lg:text-6xl font-bold text-pink-600 mb-6 lg:mb-10">
+          Lorem ipsum dolor sit amet.
+        </h2>
+      </MotionDiv>
+      <div className="flex flex-col lg:flex-row items-center justify-evenly sm:mx-10 md:mx-20 lg:mx-0 lg:space-x-10">
+        <MotionDiv
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+          className="w-full lg:w-1/2"
+        >
           <div className="w-full bg-gradient-to-b from-pink-500 via-pink-600 to-pink-700 text-white py-4 lg:py-6 px-4 lg:px-8 rounded-t-lg">
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -146,8 +168,18 @@ const FormBlock = () => {
           >
             Надіслати
           </Button>
-        </div>
-        <div className="bg-gradient-to-b from-pink-500 via-pink-600 to-pink-700 rounded-full w-fit h-fit mt-10 lg:mt-0">
+        </MotionDiv>
+        <MotionDiv
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+          className="bg-gradient-to-b from-pink-500 via-pink-600 to-pink-700 rounded-full mx-auto lg:mx-0 w-fit h-fit mt-10 lg:mt-0"
+        >
           <Image
             width={450}
             height={450}
@@ -155,7 +187,7 @@ const FormBlock = () => {
             src="/form-bags.png"
             className="drop-shadow-md"
           />
-        </div>
+        </MotionDiv>
       </div>
     </section>
   );

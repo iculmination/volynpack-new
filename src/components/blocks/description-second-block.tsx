@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
-import { Separator } from "@radix-ui/react-separator";
+import { MotionDiv } from "../ui/motion-div";
 
 const DescriptionSecondBlock = () => {
   return (
@@ -9,7 +9,17 @@ const DescriptionSecondBlock = () => {
       className="lg:pt-24 pb-16 lg:pb-40 w-full bg-gradient-to-b from-white via-white to-pink-200"
     >
       <div className="flex justify-between container">
-        <div className="lg:w-1/2 flex flex-col justify-center text-left space-y-6">
+        <MotionDiv
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+          className="lg:w-1/2 flex flex-col justify-center text-left space-y-6"
+        >
           <h2 className="text-4xl lg:text-6xl font-bold text-pink-600">
             Lorem, ipsum dolor.
           </h2>
@@ -28,8 +38,18 @@ const DescriptionSecondBlock = () => {
               Lorem.
             </Button>
           </a>
-        </div>
-        <div className="hidden lg:block bg-gradient-to-b from-pink-500 to-pink-700 rounded-full ">
+        </MotionDiv>
+        <MotionDiv
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.3 }}
+          variants={{
+            visible: { opacity: 1, scale: 1 },
+            hidden: { opacity: 0, scale: 0 },
+          }}
+          className="hidden lg:block bg-gradient-to-b from-pink-500 to-pink-700 rounded-full "
+        >
           <Image
             src="/paper-bags.webp"
             width={500}
@@ -37,7 +57,7 @@ const DescriptionSecondBlock = () => {
             alt="paper-bags"
             className="drop-shadow"
           />
-        </div>
+        </MotionDiv>
       </div>
     </section>
   );
