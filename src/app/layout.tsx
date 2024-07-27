@@ -32,7 +32,7 @@ export const metadata = {
     title: "Volynpack - Магазин паперових пакетів 24/7",
     images: [
       {
-        url: "og-thumbnail.png",
+        url: "social-thumb.png",
       },
     ],
   },
