@@ -41,7 +41,7 @@ export const metadata = {
     title: "Volynpack - Магазин паперових пакетів 24/7",
     description:
       "Volynpack - Тут можна купити велику партію паперових пакетів оптом_thumbnail",
-    // images: ["og-thumbnail.png"],
+    images: ["social-thumb.png"],
     creator: "@culmination",
   },
   creator: "@culmination",
